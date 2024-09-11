@@ -1,4 +1,3 @@
 #!/usr/bin/python3
 number = 98
-nana = f"{number} Battery street"
-print(nana)
+print("{:d} Battery street".format(number))
