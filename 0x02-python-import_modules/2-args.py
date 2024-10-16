@@ -11,3 +11,5 @@ else:
     print("{} arguments:".format(number))
     for i, argument in enumerate(arguments, start=1):
         print("{}: {}".format(i, argument))
+if __name__ == "__main__":
+    pass
