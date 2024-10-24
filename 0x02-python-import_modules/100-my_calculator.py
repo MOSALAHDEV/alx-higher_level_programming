@@ -10,12 +10,16 @@ if __name__ == "__main__":
     b = int(sys.argv[3])
     if op == '+':
         res = calculator_1.add(a, b)
+        sys.exit(0)
     elif op == '-':
         res = calculator_1.sub(a, b)
+        sys.exit(0)
     elif op == '*':
         res = calculator_1.mul(a, b)
+        sys.exit(0)
     elif op == '/':
         res == calculator_1.div(a, b)
+        sys.exit(0)
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
