@@ -9,14 +9,15 @@ def roman_to_int(roman_string):
             'D': 500,
             'M': 1000,
             }
+    if not roman_string or not isinstance(roman_string, str):
+        return 0
     total = 0
     prev_value = 0
-    if roman_string:
-        for ltr in reversed(roman_string):
-            current_value = roman_dict[ltr]
-            if current_value < prev_value:
-                total -= current_value
-            else:
-                total += current_value
-            prev_value = current_value
+    for ltr in reversed(roman_string):
+        current_value = roman_dict[ltr]
+        if current_value < prev_value:
+            total -= current_value
+        else:
+            total += current_value
+        prev_value = current_value
     return total
