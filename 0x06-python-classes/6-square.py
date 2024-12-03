@@ -23,6 +23,12 @@ class Square:
             getter for the size attribute.
         size(value):
             setter to update the size attribute.
+        position():
+            getter for the position attribute
+        position(value):
+            setter for the position attribute
+        my_print():
+            print the square using '#' character
     """
 
     def __init__(self, size=0, position=(0, 0)):
@@ -101,8 +107,9 @@ class Square:
         """
         if not isinstance(value, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
-        if not all(isinstance(i, int) for i in value)
-        or value[0] < 0 or value[1] < 0:
+        if len(value) != 2 or value[0] < 0 or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if not all(isinstance(i, int) for i in value):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
