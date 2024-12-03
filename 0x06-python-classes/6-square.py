@@ -30,6 +30,7 @@ class Square:
         Initialize a new instance of the Square class.
 
         Args:
+            position(tuple): the square position
             size(int): The size of the Square(default = 0).
         Raises:
             TypeError: if size not an integer
