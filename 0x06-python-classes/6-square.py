@@ -105,7 +105,7 @@ class Square:
             raises:
                 TypeError
         """
-        if value:
+        if value is not Noneif value is not None:
             if not isinstance(value, tuple):
                 raise TypeError("position must be a tuple of 2 positive integers")
             if len(value) != 2:
@@ -115,7 +115,7 @@ class Square:
             if value[0] < 0 and value[1] < 0:
                 raise TypeError("position must be a tuple of 2 positive integers")
             self.__position = value
-
+            
     def my_print(self):
         """
         Prints a square of size 'size' using the '#' character
