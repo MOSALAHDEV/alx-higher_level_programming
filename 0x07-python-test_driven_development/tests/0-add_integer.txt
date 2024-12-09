@@ -1,0 +1,42 @@
+importing function:
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+check docstring of module:
+
+>>> doc_mod = __import__('0-add_integer').__doc__
+>>> len(doc_mod) > 1
+True
+
+check docstring of func:
+
+>>> doc_func = __import__('0-add_integer').add_integer.__doc__
+>>> len(doc_func) > 1
+True
+
+ZeroCheck:
+
+>>> add_integer(0, 0)
+0
+
+CheckaDfalutb:
+
+>>> add_integer(1)
+99
+
+CheckTwoFloats:
+
+>>> add_integer(2.1, 2.5)
+4
+
+StringaCheck:
+
+>>> add_integer("best school")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+StringbCheck:
+
+>>> add_integer(1, "holberton")
+Traceback (most recent call last):
+TypeError: b must be an integer
