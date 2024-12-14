@@ -1,0 +1,32 @@
+ importing the module
+>>> print_square = __import__('4-print_square').print_square
+
+ checking module documentation
+>>> mod_doc = __import__('4-print_square').__doc__
+>>> len(mod_doc) > 1
+True
+
+ checking function documentation
+>>> fun_doc = __import__("4-print_square").print_square.__doc__
+>>> len(fun_doc) > 1
+True
+
+ testing positive integer
+>>> print_square(4)
+####
+####
+####
+####
+
+ testing zero size
+>>> print_square(0)
+
+ testing negative integer
+>>> print_square(-4)
+Traceback (most recent call last):
+ValueError: size must be >= 0
+
+ testing float
+>>> print_square(3.6)
+Traceback (most recent call last):
+TypeError: size must be an integer
