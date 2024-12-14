@@ -13,7 +13,7 @@ True
 
 # checking string
 >>> say_my_name("mohamed", "salah")
-'My name is mohamed salah'
+My name is mohamed salah
 
 # first_name is integer
 >>> say_my_name(12, "salah")
@@ -27,7 +27,7 @@ TypeError: last_name must be a string
 
 # only first_name
 >>> say_my_name("mohamed")
-'My name is mohamed'
+My name is mohamed
 
 # missing args
 >>> say_my_name()
