@@ -33,4 +33,4 @@ TypeError: size must be an integer
 
 >>> print_square()
 Traceback (most recent call last):
-TypeError: missing 1 required positional argument
+TypeError: print_square() missing 1 required positional argument: 'size'
