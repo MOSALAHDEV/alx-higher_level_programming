@@ -26,7 +26,7 @@ Traceback (most recent call last):
 TypeError: last_name must be a string
 
 # only first_name
->>> say_my_name("mohamed")
+>>> say_my_name("mohamed",)
 My name is mohamed
 
 # missing args
