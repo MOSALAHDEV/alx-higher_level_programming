@@ -32,3 +32,5 @@ def say_my_name(first_name, last_name=""):
         print(f"My name is {first_name} {last_name}")
     elif first_name is not None:
         print(f"My name is {first_name}")
+    else:
+        raise TypeError("first_name must be a string")
