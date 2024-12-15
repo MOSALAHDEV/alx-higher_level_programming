@@ -19,7 +19,7 @@ def text_indentation(text):
     while i < len(text):
         result.append(text[i])
         if text[i] in ".?:":
-            result.append("\n")
+            result.append("\n\n")
         i += 1
     result = ''.join(result)
-    print(result)
+    print(result, end="")
