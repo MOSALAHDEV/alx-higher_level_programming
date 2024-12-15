@@ -14,7 +14,7 @@ def text_indentation(text):
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
+    text = text.strip()
     for i in ".?:":
         text = text.replace(i, f"{i}\n\n")
     print(f"{text}", end="")
-    print()

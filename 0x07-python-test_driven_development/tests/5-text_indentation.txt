@@ -15,7 +15,6 @@ regular tests
 >>> text_indentation("holberton?")
 holberton?
 <BLANKLINE>
-<BLANKLINE>
 
 Invalid text
 >>> text_indentation(7)
