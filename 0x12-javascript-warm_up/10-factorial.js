@@ -1,11 +1,14 @@
 #!/usr/bin/node
-const calcFactorial = process.argv.slice(2);
+const calcFactorial = parseInt(process.argv[2]);
 if (isNaN(calcFactorial) || calcFactorial === 0 || calcFactorial === 1) {
   console.log(1);
 } else {
-  let result = 1;
-  for (let i = 1; i <= calcFactorial; i++) {
-    result *= i;
+  function fact (n) {
+    if (n === 1) {
+      return 1;
+    } else {
+      return n * fact(n - 1);
+    }
   }
-  console.log(result);
+  console.log(fact(calcFactorial));
 }
