@@ -12,10 +12,10 @@ checking function documentation
 True
 
 regular tests
->>> text_indentation("holberton?")
+>>> text_indentation("holberton? salah")
 holberton?
 <BLANKLINE>
-<BLANKLINE>
+salah
 
 Invalid text
 >>> text_indentation(7)
