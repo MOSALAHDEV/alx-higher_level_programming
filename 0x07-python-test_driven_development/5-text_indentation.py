@@ -17,5 +17,5 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     for i in ".?:":
         text = text.replace(i, f"{i}\n\n")
-    modified_lines = [line.strip() for line in text.split("\n")]
-    print("\n".join(modified_lines), end='')
+    modified_lines = [line.strip() for line in text.split("\n\n")]
+    print("\n\n\n".join(modified_lines), end='')
