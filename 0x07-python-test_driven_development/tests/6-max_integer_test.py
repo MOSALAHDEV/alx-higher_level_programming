@@ -19,5 +19,9 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([-1, -2, -3, -4]), -1)
         self.assertTrue(max_integer([-1, -2, -3, -4]) == -1)
         self.assertFalse(max_integer([-1, -2, -3, -4]) == -2)
+    def test_max_in_middle(self):
+        self.assertEqual(max_integer([1, 2, 5, 4, 3]), 5)
+    def test_one_element_list(self):
+        self.assertEqual(max_integer([1]), 1)
 if __name__ == '__main__':
     unittest.main()
