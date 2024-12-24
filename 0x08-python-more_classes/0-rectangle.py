@@ -2,6 +2,8 @@
 """
 This module contains the class Rectangle.
 """
+
+
 class Rectangle:
     """
     This class represents a rectangle.
