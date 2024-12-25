@@ -89,7 +89,8 @@ class Rectangle:
             if self.width == 0 or self.height == 0:
                 return ""
             a = str(self.print_symbol)
-            return "\n".join([a * self.width for _ in range(self.height)])
+            lines = [a * self.width for _ in range(self.height)]
+            return "\n".join(lines)
 
         def __repr__(self):
             """
