@@ -22,12 +22,18 @@ class BaseGeometry:
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
+
+
 class Rectangle(BaseGeometry):
     """
     This class inherits from BaseGeometry
     """
     def __init__(self, width, height):
-        self.__width = width
-        self.__height = height
+        """
+        This function initializes the class
+        """
+        super().__init__()
         self.integer_validator("width", width)
         self.integer_validator("height", height)
+        self.__width = width
+        self.__height = height
