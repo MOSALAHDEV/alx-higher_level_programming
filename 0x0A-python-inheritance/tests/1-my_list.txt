@@ -1,0 +1,24 @@
+Importing the module
+>>> MyList = __import__('1-my_list').MyList
+
+checking moule documentation
+>>> mod_doc = __import__('1-my_list').__doc__
+>>> len(mod_doc) > 1
+True
+
+checking class documentation
+>>> class_doc = __import__('1-my_list').MyList.__doc__
+>>> len(class_doc) > 1
+True
+
+checking function documentation
+>>> fun_doc = __import__('1-my_list').MyList.__doc__
+>>> len(fun_doc) > 1
+True
+
+>>> my_list = MyList()
+>>> my_list.extend([1, 5, 4, 3, 2, 7, 6])
+>>> print(my_list)
+[1, 5, 4, 3, 2, 7, 6]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5, 6, 7]
