@@ -1,0 +1,33 @@
+importing the module
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> mod_doc = __import__('7-base_geometry').__doc__
+>>> len(mod_doc) > 1
+True
+
+>>> class_doc = __import__('7-base_geometry').BaseGeometry.__doc__
+>>> len(class_doc) > 1
+True
+
+>>> fun_doc_1 = __import__('7-base_geometry').BaseGeometry.integer_validator.__doc__
+>>> len(fun_doc) > 1
+True
+
+>>> fun_doc_2 = __import__('7-base_geometry').BaseGeometry.area.__doc__
+>>> len(fun_doc) > 1
+True
+
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("holberton", "98")
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("holberton", 0)
+Traceback (most recent call last):
+ValueError: value must be greater than 0
