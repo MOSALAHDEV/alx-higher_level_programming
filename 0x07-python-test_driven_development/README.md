@@ -1,1 +1,1 @@
-# this project contains test driven development tasks
+# this Python project contains test driven development tasks
