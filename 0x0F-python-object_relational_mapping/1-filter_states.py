@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ Lists all states from the database hbtn_0e_0_usa """
-from optparse import Values
 import MySQLdb
 import sys
 
@@ -16,7 +15,11 @@ if __name__ == "__main__":
         passwd=password,
         db=database)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id ASC")
+    query = """
+    SELECT * FROM states
+    WHERE name LIKE BINARY 'N%'
+    ORDER BY states.id ASC"""
+    cur.execute(query)
     values = cur.fetchall()
     for value in values:
         print(value)
