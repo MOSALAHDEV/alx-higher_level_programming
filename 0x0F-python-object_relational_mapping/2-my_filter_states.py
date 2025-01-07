@@ -18,7 +18,7 @@ if __name__ == "__main__":
     cur = db.cursor()
     query = """
     SELECT * FROM states
-    WHERE name = '{}'
+    WHERE BINARY name = '{}'
     ORDER BY states.id ASC""".format(name.replace("'", "''"))
     cur.execute(query)
     results = cur.fetchall()
