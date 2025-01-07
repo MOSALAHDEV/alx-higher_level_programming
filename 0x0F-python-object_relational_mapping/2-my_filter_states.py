@@ -19,8 +19,8 @@ if __name__ == "__main__":
     query = """
     SELECT * FROM states
     WHERE name = %s
-    ORDER BY states.id ASC"""
-    cur.execute(query, (name,))
+    ORDER BY states.id ASC""".format(name.replace("'", "''"))
+    cur.execute(query)
     results = cur.fetchall()
     for result in results:
         print(result)
