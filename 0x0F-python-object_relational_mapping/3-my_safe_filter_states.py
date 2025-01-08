@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Lists states from the database hbtn_0e_0_usa"""
+""" Lists states from the database hbtn_0e_0_usa avoiding SQL injection"""
 import MySQLdb
 import sys
 
