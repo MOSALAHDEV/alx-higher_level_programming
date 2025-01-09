@@ -6,25 +6,20 @@ from sqlalchemy.orm import sessionmaker
 import sys
 
 
-username = sys.argv[1]
-password = sys.argv[2]
-host = 'localhost'
-port = '3306'
-database = sys.argv[3]
-Base = declarative_base()
-engine = create_engine(f'mysql+mysqldb://{username}:{password}@{host}:{port}/{database}', echo=True)
+base = declarative_base()
 
-class State(Base)
+
+class State(base):
+    """ State class """
     __tablename__ = 'states'
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
 
-    def __repr__(self):
-        return f"<State(id={self.id}, name='{self.name}'>"
 
-Base.metadata.create_all(engine)
+if __name__ == "__main__":
+    username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
 
-Session = sessionmaker(bind=engine)
-session = Session()
-session.commit()
-session.close()
+    engine = create_engine(
+            f'mysql+mysqldb://{username}:\
+                    {password}@localhost/{database}', echo=True)
+    Base.metadata.create_all(engine)
