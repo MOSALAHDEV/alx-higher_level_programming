@@ -14,7 +14,7 @@ database = sys.argv[3]
 Base = declarative_base()
 engine = create_engine(f'mysql+mysqldb://{username}:{password}@{host}:{port}/{database}', echo=True)
 
-class State(Base):
+class State(Base)
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
